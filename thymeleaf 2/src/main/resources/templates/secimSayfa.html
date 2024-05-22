@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Secim İfadesi</title>
+</head>
+<body>
+    <h2>Secim İfadeleri Gösterme</h2>
+
+    <div th:object="${secim}">
+        <table border="1" bordercolor="#ffccc" width="155">
+            <caption>Seçim Gösterim</caption>
+
+            <tr>
+                <td><p>Ad:</td>
+                <td><strong th:text="*{ad}"></strong></td>
+                </p></td></tr>
+            <tr>
+
+            <tr>
+                <td><p>Soyad:</td>
+                <td><strong th:text="*{soyad}"></strong></td>
+                </p></td></tr>
+            <tr>
+
+            <tr>
+                <td><p>Yas</td>
+                <td><strong th:text="*{yas}"></strong></td>
+                </p></td></tr>
+            <tr>
+        </table>
+    </div>
+</body>
+</html>

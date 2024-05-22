@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Başarılı</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Yeni Öğrenci Listesi</h1>
+        <table>
+            <tr>
+                <td>
+                    <p>Ad:</p>
+                    <strong th:text="${yeniogr.ad}"></strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Soyad:</p>
+                    <strong th:text="${yeniogr.soyad}"></strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Yas:</p>
+                    <strong th:text="${yeniogr.yas}"></strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Cinsiyet:</p>
+                    <strong th:text="${yeniogr.cinsiyet}"></strong>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Adres:</p>
+                    <strong th:text="${yeniogr.adres}"></strong>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

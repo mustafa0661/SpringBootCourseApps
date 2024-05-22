@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kosul</title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Yas</th>
+                <th>Ozellik1</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="ogr, ogrOzellik : ${ogrenciKosul}">
+                <strong><td th:text="${ogr.ad}"></td></strong>
+                <strong><td th:text="${ogr.soyad}"></td></strong>
+                <strong><td th:text="${ogr.yas}"></td></strong>
+                <strong><td th:text="${ogrOzellik.count}"></td></strong>
+                <strong><td>
+                    <a th:href="@{http://www.google.com.tr}" th:if="${ogr.ad}=='Enes'">Aç</a>
+                    <a th:href="@{/Kaydet}" th:if="${ogr.ad}=='Enes'">Kaydet</a>
+                    <a th:href="@{/Goster}" th:unless="${ogr.ad}=='Enes'">Goster</a>
+                </td></strong>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

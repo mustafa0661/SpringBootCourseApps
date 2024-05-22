@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Yeni Ogrenci Kayit</title>
+</head>
+<body>
+<div align="center">
+    <h1>Yeni Ögrenci Kayıt</h1>
+    <form role="form" method="post" th:action="@{/kaydet}" th:object="${yeniogr}">
+        <table>
+            <tr>
+                <td><label>Ad</label></td>
+                <td><input type="text" th:field="*{ad}"/></td>
+            </tr>
+            <tr>
+                <td><label>Soyad</label></td>
+                <td><input type="text" th:field="*{soyad}"/></td>
+            </tr>
+            <tr>
+                <td><label>Yaş</label></td>
+                <td><input type="number" th:field="*{yas}"/></td>
+            </tr>
+            <tr>
+                <td><label>Cinsiyet</label></td>
+                <td>
+                    <select th:field="*{cinsiyet}">
+                        <option value="Erkek">Erkek</option>
+                        <option value="Kadın">Kadın</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Adres</label></td>
+                <td>
+                    <select th:field="*{adres}">
+                        <option th:each="deger: ${listeEklenmis}" th:value="${deger}" th:text="${deger}"></option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <button type="submit"> Kaydet </button>
+    </form>
+</div>
+</body>
+</html>

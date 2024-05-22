@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Degisken ile Dolar Kullanma</title>
+</head>
+<body>
+<h2>Değişken İfadeleri Kullanma</h2>
+
+<div>
+    <table border="1" bordorcolor="#ffccc" width="155">
+        <caption>Degisken Gösterim</caption>
+
+        <tr>
+            <td><p>Ad:</td>
+            <td><strong th:text="${degisken.ad}"></strong></td>
+            </p></td></tr>
+        <tr>
+            <td><p>Soyad:</td>
+            <td><strong th:text="${degisken.soyad}"></strong></td>
+            </p></td></tr>
+        <tr>
+            <td><p>Yas:</td>
+            <td><strong th:text="${degisken.yas}"></strong></td>
+            </p></td></tr>
+
+
+    </table>
+</div>
+</body>
+</html>
